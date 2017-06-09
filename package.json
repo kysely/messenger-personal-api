@@ -1,0 +1,24 @@
+{
+  "name": "messenger-personal-api",
+  "version": "1.0.0",
+  "description": "Hacky solution for receiving messages on personal accounts",
+  "main": "dist/app.js",
+  "scripts": {
+    "prebuild": "babel src/ --out-dir dist/ --plugins=babel-plugin-transform-es2015-modules-commonjs",
+    "build": "node-sass --include-path sass src/sass/messenger.sass dist/css/messenger.css",
+    "prestart": "npm run build",
+    "start": "electron ."
+  },
+  "author": "Radek Kysely",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kysely/messenger-personal-api"
+  },
+  "devDependencies": {
+    "electron": "^1.6.8",
+    "node-sass": "^4.5.3",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1"
+  }
+}
